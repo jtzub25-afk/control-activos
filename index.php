@@ -7,6 +7,7 @@
     <title>Sistema de Control de Activos</title>
     <link rel="stylesheet" href="EstiloLogin.css">  
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"> 
+    <link rel="shortcut icon" href="css/saturno32.ico" type="image/x-icon">
 </head>
 <body>
     <div class="wrapper">
