@@ -62,11 +62,11 @@ $nombre_usuario = 'Administrador';
             <i class='bx bx-home'></i>
             <span class="link-name">Dashboard</span>
         </li>
-        <li class="<?= ($current_page == 'Personal.php' || $current_page == 'NuevoPersonal.php') ? 'active' : '' ?>" onclick="window.location.href='Personal.php'" title="Personal">
+        <li class="<?= ($current_page == 'Personal.php' || $current_page == 'Personal.php') ? 'active' : '' ?>" onclick="window.location.href='Personal.php'" title="Personal">
             <i class='bx bx-user'></i>
             <span class="link-name">Personal</span>
         </li>
-        <li class="<?= ($current_page == 'Activos.php' || $current_page == 'NuevoActivo.php' || $current_page == 'NuevoActivos.php') ? 'active' : '' ?>" onclick="window.location.href='activos.php'" title="Activos">
+        <li class="<?= ($current_page == 'Activos.php' || $current_page == 'Activos.php' || $current_page == 'Activos.php') ? 'active' : '' ?>" onclick="window.location.href='Activos.php'" title="Activos">
             <i class='bx bx-desktop'></i>
             <span class="link-name">Activos</span>
         </li>
