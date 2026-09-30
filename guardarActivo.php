@@ -88,11 +88,11 @@ try {
         $imagen_url
     ]);
 
-    header('Location: nuevoActivos.php?ok=1');
+    header('Location: Activos.php?ok=1');
     exit;
 
 } catch (PDOException $e) {
-    header('Location: nuevoActivos.php?error=1');
+    header('Location: Activos.php?error=1');
     exit;
 }
 ?>

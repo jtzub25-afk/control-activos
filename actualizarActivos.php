@@ -89,11 +89,11 @@ try {
         $stmt->execute([$descripcion, $fecha_compra, $num_factura, $monto_pagado, $empleado_codigo, $no_activo_original]);
     }
 
-    header('Location: activos.php?ok=actualizado');
+    header('Location: Activos.php?ok=actualizado');
     exit;
 
 } catch (PDOException $e) {
-    header('Location: activos.php?error=actualizar');
+    header('Location: Activos.php?error=actualizar');
     exit;
 }
 ?>

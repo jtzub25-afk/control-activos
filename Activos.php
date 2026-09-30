@@ -3,19 +3,21 @@ require_once 'includes/header.php';
 require_once 'config/db.php';
 
 // Lógica de búsqueda con JOIN (usamos a.* para traer también la columna de imagen si existe)
-$search = $_GET['search'] ?? '';$query = "
+$search = $_GET['search'] ?? '';
+$query = "
     SELECT a.*, e.nombres, e.apellidos 
     FROM activos a
     LEFT JOIN empleados e ON a.empleado_codigo = e.codigo
 ";
 
-if ($search) {$query .= " WHERE a.descripcion LIKE :search OR a.no_activo LIKE :search OR e.nombres LIKE :search";
+if ($search) {
+    $query .= " WHERE a.descripcion LIKE :search OR a.no_activo LIKE :search OR e.nombres LIKE :search";
     $stmt = $pdo->prepare($query);
     $stmt->execute(['search' => "\%$search%"]);
 } else {
     $stmt = $pdo->query($query);
 }
-$activos =$stmt->fetchAll();
+$activos = $stmt->fetchAll();
 ?>
 <?php require_once 'includes/sidebar.php'; ?>
 
@@ -30,10 +32,12 @@ $activos =$stmt->fetchAll();
         padding-bottom: 2px;
         transition: color 0.2s;
     }
+
     .desc-hover:hover {
         color: #2563eb;
         border-bottom-color: #2563eb;
     }
+
     .desc-hover i {
         font-size: 1.1rem;
         color: #64748b;
@@ -50,9 +54,11 @@ $activos =$stmt->fetchAll();
         border-radius: 10px;
         padding: 10px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
-        pointer-events: none; /* Evita que la ventanita estorbe al mover el mouse */
+        pointer-events: none;
+        /* Evita que la ventanita estorbe al mover el mouse */
         text-align: center;
     }
+
     #preview-tooltip img {
         width: 100%;
         height: 150px;
@@ -61,6 +67,7 @@ $activos =$stmt->fetchAll();
         background: #f8fafc;
         display: block;
     }
+
     #preview-tooltip .no-img-box {
         width: 100%;
         height: 130px;
@@ -73,11 +80,13 @@ $activos =$stmt->fetchAll();
         color: #64748b;
         font-size: 0.85rem;
     }
+
     #preview-tooltip .no-img-box i {
         font-size: 2.2rem;
         margin-bottom: 5px;
         opacity: 0.6;
     }
+
     #preview-tooltip .tooltip-title {
         margin-top: 8px;
         font-size: 0.82rem;
@@ -116,23 +125,23 @@ $activos =$stmt->fetchAll();
             </thead>
             <tbody>
                 <?php if (count($activos) > 0): ?>
-                    <?php foreach ($activos as $activo): 
-    // Lee la columna imagen_url que guarda guardarActivo.php
-    $img_src = $activo['imagen_url'] ?? $activo['imagen'] ?? $activo['foto'] ?? '';
-?>
+                    <?php foreach ($activos as $activo):
+                        // Lee la columna imagen_url que guarda guardarActivo.php
+                        $img_src = $activo['imagen_url'] ?? $activo['imagen'] ?? $activo['foto'] ?? '';
+                    ?>
                         <tr>
                             <td><?= htmlspecialchars($activo['no_activo']) ?></td>
                             <td>
-                                <span class="desc-hover" 
-                                      data-img="<?= htmlspecialchars($img_src) ?>" 
-                                      data-title="<?= htmlspecialchars($activo['no_activo'] . ' - ' .$activo['descripcion']) ?>">
+                                <span class="desc-hover"
+                                    data-img="<?= htmlspecialchars($img_src) ?>"
+                                    data-title="<?= htmlspecialchars($activo['no_activo'] . ' - ' . $activo['descripcion']) ?>">
                                     <i class='bx bx-image-alt'></i>
                                     <?= htmlspecialchars($activo['descripcion']) ?>
                                 </span>
                             </td>
                             <!-- Concatenamos nombre y apellido. Si no hay empleado, mostramos "Sin asignar" -->
                             <td>
-                                <?= $activo['nombres'] ? htmlspecialchars($activo['nombres'] . ' ' .$activo['apellidos']) : '<em>Sin asignar</em>' ?>
+                                <?= $activo['nombres'] ? htmlspecialchars($activo['nombres'] . ' ' . $activo['apellidos']) : '<em>Sin asignar</em>' ?>
                             </td>
                             <td><?= htmlspecialchars($activo['fecha_compra'] ?? 'N/A') ?></td>
                             <td>

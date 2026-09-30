@@ -29,11 +29,11 @@ if ($id) {
         if ($pdo->inTransaction()) {
             $pdo->rollBack();
         }
-        header('Location: personal.php?error=fk');
+        header('Location: Personal.php?error=fk');
         exit;
     }
 }
 
-header('Location: personal.php?ok=eliminado');
+header('Location: Personal.php?ok=eliminado');
 exit;
 ?>

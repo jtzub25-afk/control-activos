@@ -19,10 +19,10 @@ try {
     );
     $stmt->execute([$telefono, $nombres, $apellidos, $direccion, $departamento, $puesto, $codigo_original]);
     
-    header('Location: personal.php?ok=actualizado');
+    header('Location: Personal.php?ok=actualizado');
     exit;
 } catch (PDOException $e) {
-    header('Location: personal.php?error=actualizar');
+    header('Location: Personal.php?error=actualizar');
     exit;
 }
 ?>

@@ -73,14 +73,14 @@ $empleados = $stmt->fetchAll();
     <script>
         alert("Empleado eliminado correctamente. Si tenía activos asignados, fueron enviados a Bodega.");
         // Limpia la URL para que no vuelva a salir la alerta al recargar
-        window.history.replaceState({}, document.title, "personal.php");
+        window.history.replaceState({}, document.title, "Personal.php");
     </script>
 <?php endif; ?>
 
 <?php if (isset($_GET['error']) && $_GET['error'] === 'fk'): ?>
     <script>
         alert("No se puede eliminar este empleado porque aún tiene activos bajo su responsabilidad.");
-        window.history.replaceState({}, document.title, "personal.php");
+        window.history.replaceState({}, document.title, "Personal.php");
     </script>
 <?php endif; ?>
 <?php require_once 'includes/footer.php'; ?>

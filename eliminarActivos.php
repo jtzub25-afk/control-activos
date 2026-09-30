@@ -9,6 +9,6 @@ if ($id) {
     $stmt = $pdo->prepare("DELETE FROM activos WHERE no_activo = ?");
     $stmt->execute([$id]);
 }
-header('Location: activos.php?ok=eliminado');
+header('Location: Activos.php?ok=eliminado');
 exit;
 ?>

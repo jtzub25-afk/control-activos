@@ -87,7 +87,7 @@ $img_actual = $activo['imagen_url'] ?? $activo['imagen'] ?? $activo['foto'] ?? '
         
         <div class="form-group full-width">
             <button type="submit" class="btn">Actualizar Activo</button>
-            <a href="activos.php" class="btn" style="background:var(--text-muted); text-align:center; display:inline-block; margin-top:10px;">Cancelar</a>
+            <a href="Activos.php" class="btn" style="background:var(--text-muted); text-align:center; display:inline-block; margin-top:10px;">Cancelar</a>
         </div>
     </form>
 </main>

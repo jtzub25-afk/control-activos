@@ -60,7 +60,7 @@ if (!$empleado) {
             </div>
             <div class="form-group full-width">
                 <button type="submit" class="btn">Actualizar Empleado</button>
-                <a href="actualizarPersonal.php" class="btn" style="background:var(--text-muted); text-align:center; display:inline-block; margin-top:10px;">Cancelar</a>
+                <a href="Personal.php" class="btn" style="background:var(--text-muted); text-align:center; display:inline-block; margin-top:10px;">Cancelar</a>
             </div>
         </form>
 </main>

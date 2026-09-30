@@ -22,13 +22,13 @@ try {
     $stmt->execute([$codigo, $telefono, $nombres, $apellidos, $direccion, $departamento, $puesto]);
 
     // CORRECCIÓN: Redirigimos a la nueva vista separada
-    header('Location: personal.php?ok=1');
+    header('Location: Personal.php?ok=1');
     exit;
 
 } catch (PDOException $e) {
     // Si hay un error (ej. código duplicado), puedes redirigir con una variable de error
     // Opcional: puedes registrar el error exacto en un log: error_log($e->getMessage());
-    header('Location: personal.php?error=1');
+    header('Location: Personal.php?error=1');
     exit;
 }
 ?>
