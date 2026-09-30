@@ -116,7 +116,7 @@ $por_departamento = $pdo->query("
         <!-- Accesos Rápidos -->
         <div class="quick-actions" style="margin-bottom: 0;">
             <a href="nuevoActivos.php" class="btn-new"><i class='bx bx-plus'></i> Nuevo Activo</a>
-            <a href="reportes.php" class="btn-search" style="text-decoration: none; display: inline-flex; align-items: center; gap: 5px;">
+            <a href="Reportes.php" class="btn-search" style="text-decoration: none; display: inline-flex; align-items: center; gap: 5px;">
                 <i class='bx bx-printer'></i> Reportes
             </a>
         </div>
