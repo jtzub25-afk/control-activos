@@ -58,19 +58,19 @@ $nombre_usuario = 'Administrador';
     </div>
     
     <ul class="nav-links">
-        <li class="<?= ($current_page == 'Dashboard.php') ? 'active' : '' ?>" onclick="window.location.href='dashboard.php'" title="Dashboard">
+        <li class="<?= ($current_page == 'Dashboard.php') ? 'active' : '' ?>" onclick="window.location.href='Dashboard.php'" title="Dashboard">
             <i class='bx bx-home'></i>
             <span class="link-name">Dashboard</span>
         </li>
-        <li class="<?= ($current_page == 'Personal.php' || $current_page == 'nuevo_personal.php') ? 'active' : '' ?>" onclick="window.location.href='personal.php'" title="Personal">
+        <li class="<?= ($current_page == 'Personal.php' || $current_page == 'NuevoPersonal.php') ? 'active' : '' ?>" onclick="window.location.href='Personal.php'" title="Personal">
             <i class='bx bx-user'></i>
             <span class="link-name">Personal</span>
         </li>
-        <li class="<?= ($current_page == 'Activos.php' || $current_page == 'nuevo_activo.php' || $current_page == 'nuevoActivos.php') ? 'active' : '' ?>" onclick="window.location.href='activos.php'" title="Activos">
+        <li class="<?= ($current_page == 'Activos.php' || $current_page == 'NuevoActivo.php' || $current_page == 'NuevoActivos.php') ? 'active' : '' ?>" onclick="window.location.href='activos.php'" title="Activos">
             <i class='bx bx-desktop'></i>
             <span class="link-name">Activos</span>
         </li>
-        <li class="<?= ($current_page == 'Reportes.php' || $current_page == 'Reportes.php') ? 'active' : '' ?>" onclick="window.location.href='reportes.php'" title="Reportes">
+        <li class="<?= ($current_page == 'Reportes.php' || $current_page == 'Reportes.php') ? 'active' : '' ?>" onclick="window.location.href='Reportes.php'" title="Reportes">
             <i class='bx bx-bar-chart'></i>
             <span class="link-name">Reportes</span>
         </li>
